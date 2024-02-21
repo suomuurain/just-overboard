@@ -1,0 +1,94 @@
+body {
+    background: #000;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 16px;
+    overflow: hidden;
+  }
+  
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+section {
+    overflow: hidden;
+    padding: 100px 0;
+}
+
+.form {
+    color: #fff;
+}
+
+.graphic {
+    transform: scale(0.6)
+}
+
+#graphic {
+    transform: rotate(190deg);
+}
+
+.hero {
+    position: relative;
+}
+
+.hero__graphic-wrapper {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -20;
+}
+
+.hero__logo-wrapper {
+    position: absolute;
+    right: 30px;
+    top: 0;
+    z-index: -10;
+}
+
+.hero__inner-wrapper {
+    margin-top: 200px;
+}
+
+.hero__adv-wrapper {
+    margin-top: 100px; 
+}
+
+.btn-primary {
+    background-color: #7864ff;
+    border-color: #7864ff
+}
+
+
+/* Graphic Animation -- Start */
+#graphic path {
+    opacity: 0.75;
+    animation: wave2 1.8s ease-in-out infinite alternate-reverse both;
+    transform-origin: center center;
+
+    /* @for $i from 1 through 17{
+        &:nth-child(#{$i}) {
+        animation-delay: $i * 0.08s;
+        }
+    } */
+}
+
+
+@keyframes wave2 {
+    0% {
+        opacity: 0.75;
+        transform: scale(0.97) translate(2px, 2px) rotateZ(2deg);
+    }
+    40% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.01) translate(2px, -2px) rotateZ(-2deg);
+    }
+}
+  
+.feature-icon-small {
+    width: 4rem;
+    height: 4rem;
+}
